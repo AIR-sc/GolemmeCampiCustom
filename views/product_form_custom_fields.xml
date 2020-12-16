@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_product_form_custom_fields" model="ir.ui.view">
+            <field name="name">product_form_custom_fields</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Caratteristiche">
+                        <group >
+                            <group name="Caratteristiche" string="Caratteristiche" >
+                                <field name="marca"/>
+                                <field name="modello"/>
+                                <field name="tipologia"/>
+                                <field name="alimentazione"/>
+                                <field name="classe"/>
+                                <field name="tecnologia"/>
+                                <field name="unita"/>
+                                <field name="colore"/>
+                                <field name="garanzia"/>
+                                <field name="tipologia_installazione"/>
+                                <field name="detrazione_fiscale"/>
+                            </group>
+                            <group name="Dettagli" string="Dettagli tecnici" >
+                                <field name="wifi"/>
+                                <field name="telecomando"/>
+                                <field name="capacita_raffreddamento"/>
+                                <field name="capacita_riscaldamento"/>
+                                <field name="rumorosita"/>
+                                <field name="kw"/>
+                                <field name="altezza"/>
+                                <field name="lunghezza"/>
+                                <field name="larghezza"/>
+                                <field name="peso"/>
+                            </group>
+                            <group  colspan="2" >
+                                <field name="link_schede_tecniche"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="F-Gas">
+                        <group name="Dettagli">
+                            <field name="tipologia_gas"/>
+                            <field name="qta_gas_precaricato"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_marca_tree" model="ir.ui.view">
+            <field name="name">marca_form</field>
+            <field name="model">golemme.marca</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_modello_tree" model="ir.ui.view">
+            <field name="name">modello_form</field>
+            <field name="model">golemme.modello</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_tipologia_tree" model="ir.ui.view">
+            <field name="name">tipologia_form</field>
+            <field name="model">golemme.tipologia</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_tecnologia_tree" model="ir.ui.view">
+            <field name="name">tecnologia_form</field>
+            <field name="model">golemme.tecnologia</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_telecomando_tree" model="ir.ui.view">
+            <field name="name">telecomando_form</field>
+            <field name="model">golemme.telecomando</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_unita_tree" model="ir.ui.view">
+            <field name="name">unita_form</field>
+            <field name="model">golemme.unita</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_classe_tree" model="ir.ui.view">
+            <field name="name">classe_form</field>
+            <field name="model">golemme.classe</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_wifi_tree" model="ir.ui.view">
+            <field name="name">wifi_form</field>
+            <field name="model">golemme.wifi</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_colore_tree" model="ir.ui.view">
+            <field name="name">colore_form</field>
+            <field name="model">golemme.colore</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_garanzia_tree" model="ir.ui.view">
+            <field name="name">garanzia_form</field>
+            <field name="model">golemme.garanzia</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

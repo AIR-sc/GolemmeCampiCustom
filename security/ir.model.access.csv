@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_template.marca,golemme.marca,model_golemme_marca,,1,1,1,1
+access_template.modello,golemme.modello,model_golemme_modello,,1,1,1,1
+access_template.tipologia,golemme.tipologia,model_golemme_tipologia,,1,1,1,1
+access_template.alimentazione,golemme.alimentazione,model_golemme_alimentazione,,1,1,1,1
+access_template.classe,golemme.classe,model_golemme_classe,,1,1,1,1
+access_template.telecomando,golemme.telecomando,model_golemme_telecomando,,1,1,1,1
+access_template.tecnologia,golemme.tecnologia,model_golemme_tecnologia,,1,1,1,1
+access_template.unita,golemme.unita,model_golemme_unita,,1,1,1,1
+access_template.wifi,golemme.wifi,model_golemme_wifi,,1,1,1,1
+access_template.garanzia,golemme.garanzia,model_golemme_garanzia,,1,1,1,1
+access_template.colore,golemme.colore,model_golemme_colore,,1,1,1,1
+access_template.tipologia_installazione,golemme.tipologia_installazione,model_golemme_tipologia_installazione,,1,1,1,1

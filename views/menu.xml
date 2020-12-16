@@ -1,0 +1,131 @@
+
+<odoo>
+    <data>
+        <!-- ACTIONS CARATTERISTICHE -->
+
+        <record id="marca_list_action" model="ir.actions.act_window">
+            <field name="name">Marca</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.marca</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		<record id="modello_list_action" model="ir.actions.act_window">
+            <field name="name">Modello</field>   
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.modello</field>  
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="tipologia_list_action" model="ir.actions.act_window">
+            <field name="name">Tipologia</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.tipologia</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="alimentazione_list_action" model="ir.actions.act_window">
+            <field name="name">Alimentazione</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.alimentazione</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+		
+		<record id="classe_list_action" model="ir.actions.act_window">
+            <field name="name">Classe</field>   
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.classe</field> 
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		<record id="telecomando_list_action" model="ir.actions.act_window">
+            <field name="name">Telecomando</field>  
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.telecomando</field>  
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="tecnologia_list_action" model="ir.actions.act_window">
+            <field name="name">Tecnologia</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.tecnologia</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		<record id="unita_list_action" model="ir.actions.act_window">
+            <field name="name">Unità</field>  
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.unita</field>  
+            <field name="view_mode">tree,form</field>
+        </record>
+		
+		<record id="wifi_list_action" model="ir.actions.act_window">
+            <field name="name">Wi-Fi</field>   
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.wifi</field>  
+            <field name="view_mode">tree,form</field>
+        </record>
+		
+		<record id="garanzia_list_action" model="ir.actions.act_window">
+            <field name="name">Garanzia</field>   
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.garanzia</field> 
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+		<record id="colore_list_action" model="ir.actions.act_window">
+            <field name="name">Colore</field>   
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.colore</field> 
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		<record id="tipologia_installazione_list_action" model="ir.actions.act_window">
+            <field name="name">Tipologia installazione</field>   
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.tipologia_installazione</field> 
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- MENU CARATTERISTICHE -->
+        <menuitem name="Caratteristiche" id="caratteristica_list"
+              parent="stock.menu_stock_inventory_control"/>
+
+        <menuitem name="Marca" id="marca_list"
+              parent="caratteristica_list"  action="marca_list_action"/>
+
+		<menuitem name="Modello" id="modello_list"
+              parent="caratteristica_list"  action="modello_list_action"/>
+
+        <menuitem name="Tipologia" id="tipologia_list"
+              parent="caratteristica_list"  action="tipologia_list_action"/>
+
+        <menuitem name="Alimentazione" id="alimentazione_list"
+              parent="caratteristica_list"  action="alimentazione_list_action"/>
+
+		<menuitem name="Classe" id="classe_list"
+              parent="caratteristica_list"  action="classe_list_action"/>
+
+        <menuitem name="Telecomando" id="telecomando_list"
+              parent="caratteristica_list"  action="telecomando_list_action"/>
+
+        <menuitem name="Tecnologia" id="tecnologia_list"
+              parent="caratteristica_list"  action="tecnologia_list_action"/>
+
+		<menuitem name="Unità" id="unita_list"
+              parent="caratteristica_list"  action="unita_list_action"/>
+			  
+		<menuitem name="Wi-Fi" id="wifi_list"
+              parent="caratteristica_list"  action="wifi_list_action"/>
+			  
+		<menuitem name="Garanzia" id="garanzia_list"
+              parent="caratteristica_list"  action="garanzia_list_action"/>
+
+		<menuitem name="Colore" id="colore_list"
+              parent="caratteristica_list"  action="colore_list_action"/>
+
+		<menuitem name="Tipologia installaz." id="tipologia_installazione_list"
+              parent="caratteristica_list"  action="tipologia_installazione_list_action"/>
+			
+    </data>
+</odoo>
