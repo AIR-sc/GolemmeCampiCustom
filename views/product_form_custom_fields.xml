@@ -9,8 +9,10 @@
                 <xpath expr="//field[@name='barcode']" position="after">
                     <field name="pubblicare_online" string="Pubblicare on-line"/>
                 </xpath>
-                <xpath expr="//field[@name='description_sale']" position="after">
-                    <field name="descrizione_web" string="Descrizione web"/>
+                <xpath expr="//group[@name='description']" position="after">
+                     <group string="Descrizione web" name="description_web">
+                        <field name="descrizione_web" nolabel="1" placeholder="Descrizione per il web."/>
+                     </group>
                 </xpath>
                 <xpath expr="//notebook" position="inside">
                     <page string="Caratteristiche">
