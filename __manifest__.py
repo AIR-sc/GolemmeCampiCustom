@@ -2,7 +2,7 @@
 # Part of BrowseInfo. See LICENSE file for full copyright and licensing details.
 {
     'name': "Golemme custom fields",
-    'version': "1.3.0.0",
+    'version': "1.5.0.0",
     'author': "AIR-sc",
     'summary': 'Consente di specificare alcuni campi custom nell''elenco dei proditti',
     'description' : 'Consente di specificare alcuni campi custom come marca,tecnologia, btu, modello, etc... nei prodotti',
