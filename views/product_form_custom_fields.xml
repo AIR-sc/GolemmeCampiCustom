@@ -39,6 +39,11 @@
                             </group>
                         </group>
                     </page>
+                    <page string="Funzioni">
+                        <group name="Funzioni">
+                            <field name="funzioni" />
+                        </group>
+                    </page>
                     <page string="F-Gas">
                         <group name="Dettagli">
                             <field name="tipologia_gas"/>

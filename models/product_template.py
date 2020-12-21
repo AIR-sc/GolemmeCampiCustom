@@ -34,3 +34,5 @@ class product_template(models.Model):
 	larghezza = fields.Float('Larghezza', digits=(8,2))
 	peso = fields.Float('Peso', digits=(8,2))
 	link_schede_tecniche = fields.Text('Link schede tecniche')
+
+	funzioni = fields.Text('Elenco funzioni', help='Elencare le funzioni del prodotto nel formato "caratteristica=valore" (es: Dimensioni=15 pollici). Una caratteristica per ogni riga')
