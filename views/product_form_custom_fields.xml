@@ -6,9 +6,12 @@
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_only_form_view" />
             <field name="arch" type="xml">
-            <xpath expr="//field[@name='description_sale']" position="after">
-            <field name="descrizione_web" string="Descrizione web"/>
-            </xpath>
+                <xpath expr="//field[@name='barcode']" position="after">
+                    <field name="pubblicare_online" string="Pubblicare on-line"/>
+                </xpath>
+                <xpath expr="//field[@name='description_sale']" position="after">
+                    <field name="descrizione_web" string="Descrizione web"/>
+                </xpath>
                 <xpath expr="//notebook" position="inside">
                     <page string="Caratteristiche">
                         <group >
