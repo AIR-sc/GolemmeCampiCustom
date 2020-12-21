@@ -11,6 +11,7 @@
                 </xpath>
                 <xpath expr="//group[@name='description']" position="after">
                      <group string="Descrizione web" name="description_web">
+                         <hr/>
                         <field name="descrizione_web" nolabel="1" placeholder="Descrizione per il web."/>
                      </group>
                 </xpath>
