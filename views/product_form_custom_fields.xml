@@ -54,7 +54,7 @@
                     </page>
                     <page string="F-Gas">
                         <group name="Dettagli">
-                            <field name="tipologia_gas"/>
+                            <field name="tipologia_gas_sel"/>
                             <field name="qta_gas_precaricato"/>
                         </group>
                     </page>

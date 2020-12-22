@@ -8,7 +8,7 @@ class product_template(models.Model):
 	_inherit = "product.template"
 
 	# TAB F-GAS
-	tipologia_gas = fields.Many2one('golemme.tipologia_gas', string="Tipologia gas")
+	tipologia_gas_sel = fields.Many2one('golemme.tipologia_gas_sel', string="Tipologia gas")
 	qta_gas_precaricato = fields.Float('Q.tà gas precaricato', digits=(8,2))
 
 	# TAB CARATTERISTICHE

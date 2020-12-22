@@ -11,4 +11,4 @@ access_template.wifi,golemme.wifi,model_golemme_wifi,,1,1,1,1
 access_template.garanzia,golemme.garanzia,model_golemme_garanzia,,1,1,1,1
 access_template.colore,golemme.colore,model_golemme_colore,,1,1,1,1
 access_template.tipologia_installazione,golemme.tipologia_installazione,model_golemme_tipologia_installazione,,1,1,1,1
-access_template.tipologia_gas,golemme.tipologia_gas,model_golemme_tipologia_gas,,1,1,1,1
+access_template.tipologia_gas_sel,golemme.tipologia_gas_sel,model_golemme_tipologia_gas_sel,,1,1,1,1

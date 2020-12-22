@@ -76,17 +76,8 @@ class tipologia_installazione(models.Model):
     products_ids = fields.One2many('product.template', 'tipologia_installazione', string="Prodotti")
 
 
-class tipologia_gas(models.Model):
-    _name = "golemme.tipologia_gas"
+class tipologia_gas_sel(models.Model):
+    _name = "golemme.tipologia_gas_sel"
 
     name = fields.Char(string='Valore')
-    products_ids = fields.One2many('product.template', 'tipologia_gas', string="Prodotti")
-
-	
-
-
-	
-
-
-
-
+    products_ids = fields.One2many('product.template', 'tipologia_gas_sel', string="Prodotti")
