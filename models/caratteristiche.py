@@ -71,11 +71,16 @@ class colore(models.Model):
 
 class tipologia_installazione(models.Model):
     _name = "golemme.tipologia_installazione"
+
     name = fields.Char(string='Valore')
-    
     products_ids = fields.One2many('product.template', 'tipologia_installazione', string="Prodotti")
 
 
+class tipologia_gas(models.Model):
+    _name = "golemme.tipologia_gas"
+
+    name = fields.Char(string='Valore')
+    products_ids = fields.One2many('product.template', 'tipologia_gas', string="Prodotti")
 
 	
 

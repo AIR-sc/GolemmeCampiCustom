@@ -87,6 +87,13 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+		<record id="tipologia_gas_list_action" model="ir.actions.act_window">
+            <field name="name">Tipologia gas</field>   
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">golemme.tipologia_gas</field> 
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <!-- MENU CARATTERISTICHE -->
         <menuitem name="Caratteristiche" id="caratteristica_list"
               parent="stock.menu_stock_inventory_control"/>
@@ -126,6 +133,9 @@
 
 		<menuitem name="Tipologia installaz." id="tipologia_installazione_list"
               parent="caratteristica_list"  action="tipologia_installazione_list_action"/>
+
+		<menuitem name="Tipologia gas" id="tipologia_gas_list"
+              parent="caratteristica_list"  action="tipologia_gas_list_action"/>
 			
     </data>
 </odoo>
