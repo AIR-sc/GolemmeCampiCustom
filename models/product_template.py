@@ -33,9 +33,17 @@ class product_template(models.Model):
 	lunghezza = fields.Float('Lunghezza', digits=(8,2))
 	larghezza = fields.Float('Larghezza', digits=(8,2))
 	peso = fields.Float('Peso', digits=(8,2))
-	link_schede_tecniche = fields.Text('Link schede tecniche')
+	link_schede_tecniche = fields.Html('Link schede tecniche')
 
-	pubblicare_online = fields.Boolean(string="Pubblicare on-line")
+	pubblicare_online = fields.Boolean(string="Pubblicare Prestashop")
+	#pubblicare_prestashop = fields.Boolean(string="Pubblicare on-line")
+	pubblicare_amazon = fields.Boolean(string="Pubblicare Amazon")
+	pubblicare_ebay = fields.Boolean(string="Pubblicare eBay")
+	pubblicare_wordpress = fields.Boolean(string="Pubblicare wordpress")
 
 	funzioni = fields.Text('Elenco funzioni', help='Elencare le funzioni del prodotto nel formato "caratteristica=valore" (es: Dimensioni=15 pollici). Una caratteristica per ogni riga')
 	descrizione_web = fields.Html('Descrizione web')
+
+	default_code_padre = fields.Char(string="Rif. interno padre")
+	descrizione_breve = fields.Html(string="Descrizione breve")
+	descrizione_lunga = fields.Html(string="Descrizione lunga")

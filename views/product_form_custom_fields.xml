@@ -6,14 +6,35 @@
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_only_form_view" />
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='barcode']" position="after">
-                    <field name="pubblicare_online" string="Pubblicare on-line"/>
+
+                <xpath expr="//field[@name='barcode']" position="before" >
+                    <field name="default_code_padre" />
                 </xpath>
+
+                <xpath expr="//field[@name='barcode']" position="after" >
+                    
+                    <field name="pubblicare_online" string="Pubblicare Prestashop"/>
+                    <field name="pubblicare_amazon" string="Pubblicare Amazon"/>
+                    <field name="pubblicare_ebay" string="Pubblicare eBay"/>
+                    <field name="pubblicare_wordpress" string="Pubblicare Wordpress"/>
+                   
+                </xpath>
+
+                <xpath expr="//field[@name='description']" position="after">
+                     <group string="Descrizione breve" name="description_b">
+                        <field name="descrizione_breve" nolabel="1" placeholder="Descrizione breve."/>
+                    </group>
+                    <group  string="Descrizione lunga" name="description_l">
+                        <field name="descrizione_lunga" nolabel="1" placeholder="Descrizione lunga."/>
+                    </group>
+                </xpath>
+
                 <xpath expr="//group[@name='description']" position="after">
                      <group string="Descrizione web" name="description_web">
                         <field name="descrizione_web" nolabel="1" placeholder="Descrizione per il web."/>
                      </group>
                 </xpath>
+
                 <xpath expr="//notebook" position="inside">
                     <page string="Caratteristiche">
                         <group >
