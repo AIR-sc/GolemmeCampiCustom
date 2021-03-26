@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_sale_view_order_custom_forms" model="ir.ui.view">
+            <field name="name">sale_view_order_custom_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='note']" position="after" >
+                    <field name="testo_sconto_detrazione" nolabel="1" placeholder="Testo sconto detrazione fiscale"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+
+    <!-- SAREBBE BELLO AGGIUNGERE IL CAMPO NEL FILE PDF QUI DAL MODELLO
+        <template inherit_id="sale.report_saleorder_document">
+        <xpath expr="//tr[@class='border-black o_total']" position="after" >
+            <tr class="border-black o_total">
+                <td colspan="2" t-if="doc.testo_sconto_detrazione" class="text-right">
+                    <small t-field="doc.testo_sconto_detrazione"></small>
+                </td>
+            </tr>
+            <tr class="border-black o_total">
+                <td colspan="2" t-if="doc.testo_sconto_detrazione" >
+                    <br/>
+                    <b>Firma per accettazione</b>
+                    <br/><br/><br/>
+                </td>
+            </tr>
+            <tr class="border-black o_total"><td></td></tr>
+        </xpath>
+    </template> -->
+</odoo>
+

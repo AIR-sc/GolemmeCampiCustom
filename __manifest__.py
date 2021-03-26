@@ -10,6 +10,7 @@
     'category': "Extra Tools",
     'data':[
              'views/product_form_custom_fields.xml',
+             'views/sale_view_order_custom_form.xml',
              'views/menu.xml',
              'data/golemme.classe.csv',
              'data/golemme.marca.csv',
@@ -21,7 +22,7 @@
              'security/ir.model.access.csv',
              ],
     'website': 'https://www.air-srl.com',
-    'depends': ['stock'],
+    'depends': ['stock','sale'],
     'installable': True,
     'auto_install': False,
 	"images":['static/description/golemmeLogo.png'],
