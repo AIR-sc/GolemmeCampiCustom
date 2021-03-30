@@ -11,6 +11,7 @@
     'data':[
              'views/product_form_custom_fields.xml',
              'views/sale_view_order_custom_form.xml',
+             'views/stock_view_stock_picking_custom_form.xml',
              'views/menu.xml',
              'data/golemme.classe.csv',
              'data/golemme.marca.csv',

@@ -4,4 +4,5 @@
 from . import caratteristiche
 from . import product_template
 from . import sale_order
+from . import stock_picking
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4::

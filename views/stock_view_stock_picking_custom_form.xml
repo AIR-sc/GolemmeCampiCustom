@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_stock_view_stock_picking_custom_form" model="ir.ui.view">
+            <field name="name">stock_view_stock_picking_custom_form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form" />
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='group_id']" position="after" >
+                    
+                        <field name="codice_tracking_spedizione" string="Cod. tracking spedizione"/>
+                    
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+
+    <!-- SAREBBE BELLO AGGIUNGERE IL CAMPO NEL FILE PDF QUI DAL MODELLO
+        <div class="page">
+                    <h2>
+                        <span t-field="o.name"/>
+                    </h2>
+                    <div class="row mt32 mb32">
+                        <div t-if="o.origin" class="col-auto" name="div_origin">
+                            <strong>Order:</strong>
+                            <p t-field="o.origin"/>
+                        </div>
+                        <div t-if="o.codice_tracking_spedizione" class="col-auto" name="div_origin">
+                            <strong>Cod. tracking spediz.:</strong>
+                            <p t-field="o.codice_tracking_spedizione"/>
+                        </div>
+                        <div t-if="o.state" class="col-auto" name="div_sched_date">
+                            <strong>Shipping Date:</strong>
+                            <t t-if="o.state == 'done'">
+                                <p t-field="o.date_done"/>
+                            </t>
+                            <t t-if="o.state != 'done'">
+                                <p t-field="o.scheduled_date"/>
+                           </t>
+                        </div>
+                    </div> -->
+</odoo>
+
