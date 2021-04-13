@@ -10,18 +10,20 @@ class sale_order_template(models.Model):
         # Se il cliente ha un indirizzo di mail specificato
         if record['partner_id']['email'] and record['partner_id']['email'] != '':
 
-            # Cerco i tag del cliente
+            # Cerco i tag dell'ordine
             for tag in record['tag_ids']:
+
                 # Se esiste il tag Spedito
-                if tag['name'].lower() != 'spedito': continue
+                if tag['name'].lower() != 'in spedizione': continue
+
 
                 # Cerco il numero del tracking
                 trackNumber = ''
                 pickings = env['stock.picking'].sudo().search([('sale_id', '=', record['id'])])
-
                 for picking in pickings:
                     if 'codice_tracking_spedizione' in picking and picking['codice_tracking_spedizione']:
                         trackNumber += "<b>%s</b> " % picking['codice_tracking_spedizione']
+
 
                 # Creo il body della mail (specificando il numero del tracking se è previsto nelle spedizioni)
                 body = ''
@@ -31,6 +33,7 @@ class sale_order_template(models.Model):
                 else:
                     body = 'Ciao %s, <br>il tuo ordine <b>%s</b> è stato spedito.<br>Distinti saluti <br><br>AIR Servizio invio' % (
                     record['partner_id']['name'], record['display_name'], trackNumber)
+
 
                 # Invio la mail
                 mail_values = {
@@ -44,4 +47,12 @@ class sale_order_template(models.Model):
                 # Registro la mail inviata nelle note dell'ordine
                 record.message_post(body=body)
 
+                # Rimuovo il tag "In spedizione"
+                record['tag_ids'] = [(3, int(tag['id']))]
+
+                # Aggiungo il tag Spedito
+                crmTagEnv = env["crm.tag"]
+                tagSpedito = crmTagEnv.sudo().search([('name', '=', 'Spedito')], limit=1)
+                if tagSpedito and len(tagSpedito) == 1:
+                    record['tag_ids'] = [(4, int(tagSpedito[0]['id']))]
                 break
