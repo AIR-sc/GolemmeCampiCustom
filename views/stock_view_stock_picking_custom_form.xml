@@ -18,6 +18,8 @@
     </data>
 
     <!-- SAREBBE BELLO AGGIUNGERE IL CAMPO NEL FILE PDF QUI DAL MODELLO
+    Model Data:	report_delivery_document
+    External ID:	stock.report_delivery_document
         <div class="page">
                     <h2>
                         <span t-field="o.name"/>
