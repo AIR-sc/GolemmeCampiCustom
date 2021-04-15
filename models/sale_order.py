@@ -78,6 +78,7 @@ class sale_order_template(models.Model):
     @api.onchange('sale_order_template_id')
     def onchange_testo_sconto(self):
         if self.sale_order_template_id:
+            new_testo = ""
             if self.sale_order_template_id.testo_sconto_detrazione:
                 new_testo = self.sale_order_template_id.testo_sconto_detrazione
-                return self.update({'testo_sconto_detrazione':new_testo})
+            return self.update({'testo_sconto_detrazione':new_testo})
