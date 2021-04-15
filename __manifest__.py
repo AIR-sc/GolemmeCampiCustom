@@ -13,7 +13,7 @@
              'views/sale_view_order_custom_form.xml',
              'views/stock_view_stock_picking_custom_form.xml',
              'views/menu.xml',
-             'views/sale_order_template.xml',
+             #'views/sale_order_template.xml',
              'data/golemme.classe.csv',
              'data/golemme.marca.csv',
              'data/golemme.tecnologia.csv',
