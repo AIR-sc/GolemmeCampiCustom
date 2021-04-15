@@ -74,3 +74,10 @@ class sale_order_template(models.Model):
                 if tagSpedito and len(tagSpedito) == 1:
                     record['tag_ids'] = [(4, int(tagSpedito[0]['id']))]
                 break
+
+    @api.onchange('sale_order_template_id')
+    def onchange_testo_sconto(self):
+        if self.sale_order_template_id:
+            if self.sale_order_template_id.testo_sconto_detrazione:
+                new_testo = self.sale_order_template_id.testo_sconto_detrazione
+                return self.update({'testo_sconto_detrazione':new_testo})

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="custom_tab_sconto_detrazioni" model="ir.ui.view">
+        <field name="name">custom_tab_sconto_detrazioni</field>
+        <field name="model">sale.order.template</field>
+        <field name="inherit_id" ref="sale_management.sale_order_template_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//notebook" position="inside">
+                <page name="tab_detrazione"string="Sconto detrazione">
+                    <group>
+                            <group string="Testo">
+                                <field name="testo_sconto_detrazione" type="html"/>
+                            </group>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
