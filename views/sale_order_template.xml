@@ -9,10 +9,9 @@
 
             <xpath expr="//notebook" position="inside">
                 <page name="tab_detrazione" string="Sconto detrazione">
-                    <group>
-                            <group string="Testo">
-                                <field name="testo_sconto_detrazione" type="html"/>
-                            </group>
+                    <group string="Testo">
+                        <field name="testo_sconto_detrazione" type="html"/>
+
                     </group>
                 </page>
             </xpath>
