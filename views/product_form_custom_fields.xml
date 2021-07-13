@@ -12,12 +12,7 @@
                 </xpath>
 
                 <xpath expr="//field[@name='barcode']" position="after" >
-                    
-                    <field name="pubblicare_online" string="Pubblicare Prestashop"/>
-                    <field name="pubblicare_amazon" string="Pubblicare Amazon"/>
-                    <field name="pubblicare_ebay" string="Pubblicare eBay"/>
-                    <field name="pubblicare_wordpress" string="Pubblicare Wordpress"/>
-                   
+
                 </xpath>
 
                 <xpath expr="//field[@name='description']" position="after">
@@ -34,6 +29,53 @@
                         <field name="descrizione_web" nolabel="1" placeholder="Descrizione per il web."/>
                      </group>
                 </xpath>
+
+                  <xpath expr="//page[@name='purchase']" position="after">
+                 <page name="ecommerce" string="eCommerce">
+
+                     <group name="prestashop" string="Prestashop" colspan="4" col="4">
+                        <group colspan="1" col="1">
+                        <field name="pubblicare_online" string="Pubblicare Prestashop" />
+                        </group >
+                        <group colspan="3" col="3">
+                        <field name="link_prestashop" string="Link Prestashop" colspan="3" col="3"/>
+                        </group>
+                    </group>
+
+                    <group name="amazon" string="Amazon" colspan="4" col="4">
+                       <group colspan="1" col="1">
+                        <field name="pubblicare_amazon" string="Pubblicare Amazon" />
+                        </group>
+                       <group colspan="3" col="3">
+                        <field name="link_amazon" string="Link Amazon" colspan="3" col="3"/>
+                        </group>
+                    </group>
+
+                    <group name="ebay" string="eBay" colspan="4" col="4">
+                      <group colspan="1" col="1">
+                        <field name="pubblicare_ebay" string="Pubblicare eBay" />
+                        </group>
+                      <group colspan="3" col="3">
+                        <field name="link_ebay" string="Link eBay" colspan="3" col="3"/>
+                        </group>
+                    </group>
+
+                    <group name="wordpress" string="WordPress" colspan="4" col="4">
+                      <group colspan="1" col="1">
+                        <field name="pubblicare_wordpress" string="Pubblicare Wordpress" />
+                        </group>
+                      <group colspan="3" col="3">
+                        <field name="link_wordpress" string="Link Wordpress" colspan="3" col="3"/>
+                      </group>
+                    </group>
+
+                    <group name="vendita ecommerce" string="Vendita eCommerce">
+                        <field name="disp_vendita_ecommerce" string="Disp.vendita ecommerce"/>
+                    </group>
+                  </page>
+
+                </xpath>
+
 
                 <xpath expr="//notebook" position="inside">
                     <page string="Caratteristiche">
