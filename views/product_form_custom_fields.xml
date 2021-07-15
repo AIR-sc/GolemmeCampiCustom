@@ -16,19 +16,22 @@
                 </xpath>
 
                 <xpath expr="//field[@name='description']" position="after">
-                     <group string="Descrizione breve" name="description_b">
-                        <field name="descrizione_breve" nolabel="1" placeholder="Descrizione breve."/>
-                    </group>
-                    <group  string="Descrizione lunga" name="description_l">
-                        <field name="descrizione_lunga" nolabel="1" placeholder="Descrizione lunga."/>
-                    </group>
+
                 </xpath>
+
+
 
                 <xpath expr="//group[@name='description']" position="after">
                      <group string="Descrizione web" name="description_web">
                         <field name="descrizione_web" nolabel="1" placeholder="Descrizione per il web."/>
                      </group>
                 </xpath>
+
+
+                  <xpath expr="//page[@name='shop']" position="attributes">
+                     <attribute name="invisible">True</attribute>
+                </xpath>
+
 
                   <xpath expr="//page[@name='purchase']" position="after">
                  <page name="ecommerce" string="eCommerce">
@@ -71,7 +74,19 @@
 
                     <group name="vendita ecommerce" string="Vendita eCommerce">
                         <field name="disp_vendita_ecommerce" string="Disp.vendita ecommerce"/>
+
+
+
                     </group>
+                     <group colspan="4" col="4">
+                         <group string="Descrizione breve" name="description_b" colspan="2" col="2">
+                            <field name="descrizione_breve" nolabel="1" placeholder="Descrizione breve."/>
+                        </group>
+                        <group string="Descrizione lunga" name="description_l" colspan="2" col="2">
+                            <field name="descrizione_lunga" nolabel="1" placeholder="Descrizione lunga."/>
+                        </group>
+                     </group>
+
                   </page>
 
                 </xpath>
