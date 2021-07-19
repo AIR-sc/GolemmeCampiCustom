@@ -22,7 +22,7 @@ class product_template(models.Model):
 	unita = fields.Many2one('golemme.unita', string="Unita")
 	wifi = fields.Many2one('golemme.wifi', string="Wi-Fi")
 	garanzia = fields.Many2one('golemme.garanzia', string="Garanzia")
-	colore  = fields.Many2one('golemme.colore', string="Colore")
+	colore = fields.Many2one('golemme.colore', string="Colore")
 	tipologia_installazione = fields.Many2one('golemme.tipologia_installazione', string="Tipologia installaz.")
 	detrazione_fiscale = fields.Boolean(string="Detrazione fiscale")
 	capacita_raffreddamento = fields.Char('Cap. raffreddamento')

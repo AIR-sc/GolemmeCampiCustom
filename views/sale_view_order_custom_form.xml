@@ -20,19 +20,25 @@
     <!-- SAREBBE BELLO AGGIUNGERE IL CAMPO NEL FILE PDF QUI DAL MODELLO
         <template inherit_id="sale.report_saleorder_document">
         <xpath expr="//tr[@class='border-black o_total']" position="after" >
-            <tr class="border-black o_total">
+            <tr class="border-black ">
+                <td name="td_amount_total_label"><strong>Total</strong></td>
+                <td name="td_amount_total" class="text-right">
+                    <span t-field="doc.amount_total"/>
+                </td>
+            </tr>
+            <tr class="border-black ">
                 <td colspan="2" t-if="doc.testo_sconto_detrazione" class="text-right">
                     <small t-field="doc.testo_sconto_detrazione"></small>
                 </td>
             </tr>
-            <tr class="border-black o_total">
+            <tr class="border-black ">
                 <td colspan="2" t-if="doc.testo_sconto_detrazione" >
                     <br/>
                     <b>Firma per accettazione</b>
                     <br/><br/><br/>
                 </td>
             </tr>
-            <tr class="border-black o_total"><td></td></tr>
+            <tr ><td  colspan="2"></td></tr>
         </xpath>
     </template> -->
 </odoo>

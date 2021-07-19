@@ -82,3 +82,26 @@ class sale_order_template(models.Model):
             if self.sale_order_template_id.testo_sconto_detrazione:
                 new_testo = self.sale_order_template_id.testo_sconto_detrazione
             return self.update({'testo_sconto_detrazione':new_testo})
+
+
+class report_sale_order(models.AbstractModel):
+    _name = 'report.sale.report_saleorder'
+    _description = 'Stampa report sale-order'
+
+    def _get_report_values(self, docids, data=None):
+        """Aggiunge l'etichetta 'Stampato' all'ordine"""
+
+        docs = self.env['sale.order'].browse(docids)
+
+        for doc in docs:
+            tag = self.env['crm.tag'].search([('name', '=', 'Stampato')], limit=1)
+            if not tag:
+                tag = tag.create({'name': 'Stampato'})
+            if tag.id not in doc.tag_ids.ids:
+                doc.tag_ids = [(4, tag.id)]
+        return {
+            'doc_ids': docs.ids,
+            'doc_model': 'sale.order',
+            'docs': docs
+        }
+
