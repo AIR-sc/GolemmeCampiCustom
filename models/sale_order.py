@@ -5,7 +5,7 @@ class sale_order_template(models.Model):
     _inherit = "sale.order"
 
     testo_sconto_detrazione = fields.Html('Testo sconto detrazione')
-    
+
     def send_email_by_tag(self, record, env, email_from):
 
         # Se il cliente ha un indirizzo di mail specificato
