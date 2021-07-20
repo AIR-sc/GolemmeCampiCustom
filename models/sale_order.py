@@ -5,7 +5,7 @@ class sale_order_template(models.Model):
     _inherit = "sale.order"
 
     testo_sconto_detrazione = fields.Html('Testo sconto detrazione')
-
+    
     def send_email_by_tag(self, record, env, email_from):
 
         # Se il cliente ha un indirizzo di mail specificato
@@ -92,13 +92,13 @@ class report_sale_order(models.AbstractModel):
         """Aggiunge l'etichetta 'Stampato' all'ordine"""
 
         docs = self.env['sale.order'].browse(docids)
-
-        for doc in docs:
-            tag = self.env['crm.tag'].search([('name', '=', 'Stampato')], limit=1)
-            if not tag:
-                tag = tag.create({'name': 'Stampato'})
-            if tag.id not in doc.tag_ids.ids:
-                doc.tag_ids = [(4, tag.id)]
+        if not 'force_email' in self._context:
+            for doc in docs:
+                tag = self.env['crm.tag'].search([('name', '=', 'Stampato')], limit=1)
+                if not tag:
+                    tag = tag.create({'name': 'Stampato'})
+                if tag.id not in doc.tag_ids.ids:
+                    doc.tag_ids = [(4, tag.id)]
         return {
             'doc_ids': docs.ids,
             'doc_model': 'sale.order',

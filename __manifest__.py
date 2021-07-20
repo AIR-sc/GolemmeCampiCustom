@@ -24,7 +24,7 @@
              'security/ir.model.access.csv',
              ],
     'website': 'https://www.air-srl.com',
-    'depends': ['stock','sale','sale_management'],
+    'depends': ['stock','sale','sale_management','product','website_sale'],
     'installable': True,
     'auto_install': False,
 	"images":['static/description/golemmeLogo.png'],
