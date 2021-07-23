@@ -1,5 +1,5 @@
 from odoo import api, fields, models, _
-
+from datetime import date
 
 class sale_order_template(models.Model):
     _inherit = "sale.order"
@@ -82,6 +82,18 @@ class sale_order_template(models.Model):
             if self.sale_order_template_id.testo_sconto_detrazione:
                 new_testo = self.sale_order_template_id.testo_sconto_detrazione
             return self.update({'testo_sconto_detrazione':new_testo})
+
+    def print_order(self):
+        tag = self.env['crm.tag'].search([('name', '=', 'Stampato')], limit=1)
+        if not tag:
+            tag = tag.create({'name': 'Stampato'})
+        if tag.id not in self.tag_ids.ids:
+            self.tag_ids = [(4, tag.id)]
+        user = self.env.user
+        body ='Stampato da %s il %s' % (user.name,date.today().strftime('%d-%m-%Y'))
+        
+        self.message_post(body=body)
+        return self.env.ref('sale.action_report_saleorder').report_action(self)
 
 
 # class report_sale_order(models.AbstractModel):

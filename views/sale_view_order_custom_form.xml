@@ -12,7 +12,11 @@
                         <field name="testo_sconto_detrazione" nolabel="1" placeholder="Testo sconto detrazione fiscale"/>
                     </group>
                 </xpath>
+                <xpath position="inside" expr="//header">
 
+                    <button name="print_order" type="object" class="oe_highlight" string="Stampa preventivo"/>
+
+                </xpath>
             </field>
         </record>
     </data>
