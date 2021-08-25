@@ -1,5 +1,5 @@
 from odoo import api, fields, models, _
-from datetime import date
+from datetime import date, datetime
 
 class sale_order_template(models.Model):
     _inherit = "sale.order"
@@ -90,7 +90,7 @@ class sale_order_template(models.Model):
         if tag.id not in self.tag_ids.ids:
             self.tag_ids = [(4, tag.id)]
         user = self.env.user
-        body ='Stampato da %s il %s' % (user.name,date.today().strftime('%d-%m-%Y'))
+        body ='Stampato da %s il %s' % (user.name, datetime.now().strftime('%d-%m-%Y %H:%M'))
         
         self.message_post(body=body)
         return self.env.ref('sale.action_report_saleorder').report_action(self)
