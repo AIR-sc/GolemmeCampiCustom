@@ -95,6 +95,18 @@ class sale_order_template(models.Model):
         self.message_post(body=body)
         return self.env.ref('sale.action_report_saleorder').report_action(self)
 
+    def print_orders(self):
+        tag = self.env['crm.tag'].search([('name', '=', 'Stampato')], limit=1)
+        if not tag:
+            tag = tag.create({'name': 'Stampato'})
+        for order in self:
+            if tag.id not in order.tag_ids.ids:
+                order.tag_ids = [(4, tag.id)]
+            user = order.env.user
+            body = 'Stampato da %s il %s' % (user.name, datetime.now().strftime('%d-%m-%Y %H:%M'))
+
+            order.message_post(body=body)
+        return self.env.ref('sale.action_report_saleorder').report_action(self)
 
 # class report_sale_order(models.AbstractModel):
 #     _name = 'report.sale.report_saleorder'
