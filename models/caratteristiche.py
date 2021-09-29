@@ -33,6 +33,7 @@ class alimentazione(models.Model):
 
 class classe(models.Model):
     _name = "golemme.classe"
+    _description = "Classe prodotti"
 
     name = fields.Char(string='Valore')
     products_ids = fields.One2many('product.template', 'classe', string="Prodotti")
@@ -53,6 +54,7 @@ class tecnologia(models.Model):
 	
 class unita(models.Model):
     _name = "golemme.unita"
+    _description = "Unità prodotti"
 
     name = fields.Char(string='Valore')
     products_ids = fields.One2many('product.template', 'unita', string="Prodotti")
@@ -66,6 +68,7 @@ class wifi(models.Model):
     
 class garanzia(models.Model):
     _name = "golemme.garanzia"
+    _description = "Garanzia prodotti"
 
     name = fields.Char(string='Valore')
     products_ids = fields.One2many('product.template', 'garanzia', string="Prodotti")
